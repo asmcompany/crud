@@ -1,0 +1,23 @@
+{% extends 'cbvApp/base.html' %}
+
+{% block body_content %}
+
+
+    <div class="container alert alert-warning" role="alert">
+        <h4 class="alert-heading">Warning!</h4>
+        <p>are you sure for delete {{student.firstName}} ?</p>
+        <hr>
+        <div class="mb-0">
+            <div class="col-md-1">
+            <form method="post">
+            {% csrf_token %}
+            <button class="btn btn-warning" type="submit">delele</button>
+            </form>
+            </div>
+            <div class="col-md-1">
+            <button class="btn btn-light"><a class="text-white" href="/students">cancle</a></button>
+        </div>
+        </div>
+      </div>
+
+{% endblock %}

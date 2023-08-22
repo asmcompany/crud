@@ -1,0 +1,62 @@
+{% extends 'cbvApp/base.html' %}
+
+{% block body_content %}
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col col-sm-3 col-xs-12">
+                                <h4 class="title">Transaction<span>Create</span></h4>
+                            </div>
+                            <div class="col-sm-9 col-xs-12 text-right">
+                                <div class="btn_group">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body table-responsive">
+                        <form method="post">
+                            {% csrf_token %}
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>name</th>
+                                    <th>position</th>
+                                    <th>enter</th>
+                                    <th>Percentage</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text.blue">{{form.firstName}}</td>
+                                    <td>{{form.lastName}}</td>
+                                    <td>{{form.enter}}</td>
+                                    <td>{{form.testScore}}</td>
+                                    <td>{{form.Amount}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="col-sm-9">
+                        
+                        </div>
+                        <div class="col-sm-3" >
+                        <button type="submit" class="btn btn-info btn-lg" >Add Transaction</button>
+                        </div>
+                    </form>
+                    </div>
+                    <div class="panel-footer">
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
