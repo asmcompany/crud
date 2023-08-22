@@ -1,0 +1,1 @@
+web: gunicorn cbvCrud.wsgi --log-file -
